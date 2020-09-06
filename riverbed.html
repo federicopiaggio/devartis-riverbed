@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&family=Barlow:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Riverbed</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="">
+          <h1>riverbed</h1>
+          <h2>Product Catalog</h2>
+        </div>
+
+        <ul>
+          <li>
+            <a id="cart" href=""><i class="fas fa-shopping-cart"></i> Cart</a>
+          </li>
+
+          <li>
+            <a id="account" href=""><i class="fas fa-user-alt"></i> Account</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="border-gradient"></div>
+    </header>
+
+    <main>
+      <ul class="web-links">
+        <li><a href="">Catalog</a><span>></span></li>
+        <li><a href="">Cart Contents</a><span>></span></li>
+        <li><a href="">Checkout</a></li>
+      </ul>
+
+      <ul class="step-progress-bar">
+        <li class="step-active">Your Cart</li>
+        <li class="step-active">Delivery</li>
+        <li>Billing</li>
+        <li>Review & Pay</li>
+        <li>Confirmation</li>
+      </ul>
+
+      <h2>Delivery Information</h2>
+      <h3>Shipping Address</h3>
+      <p>
+        Please choose from your address book where you would like the items to
+        be delivered to by clicking Select.<br />
+        Please note shipments are FCA Shipping Point / FOB Origin
+      </p>
+      <div class="addresses-container">
+        <ul class="address selected">
+          <li>John Doe</li>
+          <li>Cascade QA</li>
+          <li>199 Fremont St</li>
+          <li>San Francisco, CA 94105</li>
+          <li>United States</li>
+
+          <div class="button-container">
+            <button class="btn"><i class="fas fa-check"></i> Selected</button>
+            <button class="icon-btn" name="edit">
+              <i class="fas fa-edit"></i>
+            </button>
+            <button class="icon-btn" name="delete">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+        </ul>
+        <ul class="address active">
+          <li>John Doe</li>
+          <li>Cascade QA</li>
+          <li>199 Fremont St</li>
+          <li>San Francisco, CA 94105</li>
+          <li>United States</li>
+          <div class="button-container">
+            <button class="btn">Select</button>
+            <button class="icon-btn" name="edit">
+              <i class="fas fa-edit"></i>
+            </button>
+            <button class="icon-btn" name="delete">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+        </ul>
+        <ul class="address passive">
+          <li></li>
+          <div class="button-container">
+            <button class="btn">Add new address</button>
+          </div>
+        </ul>
+      </div>
+      <p class="address-info">
+        <i class="fas fa-info-circle"></i>
+        If you prefer to use
+        <b>your own UPS or FEDEX Account Number </b> , please contact
+        <strong>sales-us-davis@riverbed.com</strong> before continuing your
+        order.
+      </p>
+    </main>
+    <section class="shipping-order-container">
+      <h3>Shipping-Order ships within 3 business days of order receipt</h3>
+      <div class="order-container">
+        <div class="order-info">
+          <strong>United Parcel Service (XML) (1 pkg x 1 lbs Total)</strong>
+          <div>UPS Ground, 2017-03-31</div>
+        </div>
+        <strong>$15.50</strong>
+      </div>
+    </section>
+    <section class="contact-info margin-right">
+      <h3>Add Comments About your Order</h3>
+      <textarea
+        name="comment"
+        id=""
+        rows="5"
+        placeholder="Enter your comment..."
+      ></textarea>
+      <div class="buttons-container">
+        <button class="btn2">Back</button>
+        <button class="btn" type="submit">Continue</button>
+      </div>
+    </section>
+    <footer class="margin-right">
+      <h2>riverbed</h2>
+      <span> 2017 Riverbed Technology. All Rights Reserved.</span>
+      <ul>
+        <li><a href="Home">Home</a></li>
+        <li><a href="Products">Products</a></li>
+        <li><a href="support">support</a></li>
+        <li><a href="Downloads">Downloads</a></li>
+        <li><a href="resources">resources</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
