@@ -1,7 +1,7 @@
 // Variables
 $color1: #ff681d;
 $color2: #ffb81d;
-$color3: #415464;
+$color3: #2c3843;
 $color4: #eeeff0;
 $color5: #f4f6f7;
 $color6: #dadde0;
@@ -16,7 +16,7 @@ $color6: #dadde0;
 
 main,
 section,
-footer,
+.footer-container,
 .header-container {
   margin: auto;
   max-width: 1460px;
@@ -288,11 +288,68 @@ main {
 }
 
 footer {
-  color: red;
+  background-color: $color3;
+  padding: 40px 0 60px;
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+  span {
+    color: $color4;
+    font-size: 0.8rem;
+    font-weight: 300;
+    opacity: 0.5;
+  }
+
+  h2 {
+    color: $color1;
+    font-size: 1.6rem;
+    display: inline;
+    font-weight: bold;
+    margin-right: 20px;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+  }
+  li {
+    position: relative;
+    padding: 0 7px;
+  }
+  li::before {
+    display: block;
+    position: absolute;
+    top: -1px;
+    left: 54px;
+    content: "|";
+    font-size: 1.1rem;
+    color: $color6;
+    opacity: 0.5;
+  }
+  li:nth-child(1)::before {
+    left: 54px;
+  }
+  li:nth-child(2)::before {
+    left: 89px;
+  }
+  li:nth-child(3)::before {
+    left: 79px;
+  }
+  li:nth-child(4)::before {
+    left: 104px;
+  }
+  li:nth-child(5)::before {
+    content: none;
+  }
 }
 
 li {
   list-style-type: none;
+  text-transform: uppercase;
 }
 
 a {
