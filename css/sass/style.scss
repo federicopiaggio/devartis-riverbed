@@ -5,6 +5,8 @@ $color3: #2c3843;
 $color4: #eeeff0;
 $color5: #f4f6f7;
 $color6: #dadde0;
+$color7: #59aee1;
+$color8: #8999a5;
 
 * {
   margin: 0;
@@ -17,7 +19,8 @@ $color6: #dadde0;
 main,
 section,
 .footer-container,
-.header-container {
+.header-container,
+.web-links {
   margin: auto;
   max-width: 1460px;
   padding: 0 30px;
@@ -61,6 +64,7 @@ header {
   ul {
     display: flex;
     flex-direction: row;
+
     li:first-child {
       border-right-width: thin;
       border-right-style: solid;
@@ -69,12 +73,28 @@ header {
     li {
       font-size: 1.2rem;
       padding: 8px 30px;
+      position: relative;
     }
-  }
-  i {
-    font-size: 1.6rem;
-    padding-right: 10px;
-    color: $color4;
+    .cart-status {
+      display: block;
+      width: 20px;
+      height: 20px;
+      top: -2px;
+      left: 49px;
+      border-radius: 50%;
+      position: absolute;
+      background-color: $color7;
+      color: $color4;
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: bold;
+      line-height: 18px;
+    }
+    i {
+      font-size: 1.6rem;
+      padding-right: 10px;
+      color: $color4;
+    }
   }
 }
 
@@ -88,13 +108,11 @@ header {
     rgba(255, 104, 29, 1) 100%
   );
 }
-
-main {
-  display: flex;
-  flex-direction: column;
+nav {
   .web-links {
     display: flex;
-    padding: 20px 0;
+    text-align: center;
+    padding: 20px 30px;
 
     a {
       padding: 10px;
@@ -102,6 +120,14 @@ main {
       font-weight: 500;
     }
   }
+  hr {
+    opacity: 0.3;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
 
   .step-progress-bar {
     display: flex;
@@ -114,6 +140,9 @@ main {
       display: inline-block;
       position: relative;
       width: 20%;
+      color: $color8;
+      font-weight: 400;
+      font-size: 1.1rem;
       text-align: center;
       margin: 15px 0;
     }
@@ -156,6 +185,7 @@ main {
 
     .step-active {
       color: $color1;
+      font-weight: bold;
     }
 
     .step-active:before {
@@ -174,12 +204,40 @@ main {
       margin-right: 30px;
       margin-bottom: 30px;
       min-width: 310px;
+      border: solid 7px transparent;
       li:first-child {
         font-weight: bold;
       }
 
       li {
         padding: 5px;
+      }
+    }
+    .selected {
+      border-color: $color6;
+
+      button:first-child {
+        background-color: $color3;
+
+        text-align: center;
+        i {
+          color: $color4;
+          font-size: 1.1 rem;
+          padding-right: 10px;
+        }
+      }
+    }
+    .passive {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      li {
+        justify-self: center;
+      }
+      i {
+        font-size: 4rem;
+        opacity: 0.3;
       }
     }
   }
@@ -214,6 +272,10 @@ main {
     align-items: center;
     background-color: $color5;
     padding: 30px;
+    strong {
+      font-weight: 500;
+      align-self: flex-start;
+    }
     .order-info {
       display: flex;
       flex-direction: column;
@@ -231,19 +293,26 @@ main {
   textarea {
     font-size: 1.2rem;
     padding: 10px;
+    opacity: 0.6;
   }
 
   .btn2 {
+    cursor: pointer;
     background-color: transparent;
     border: none;
     color: #ff681d;
+    font-weight: 500;
     font-size: 1.2rem;
   }
 
   .buttons-container {
     display: flex;
     justify-content: space-between;
-    margin: 30px;
+    margin: 30px 0;
+    :nth-child(2) {
+      background-color: $color7;
+      padding: 12px 10px;
+    }
   }
 }
 
@@ -252,6 +321,7 @@ main {
 }
 
 .btn {
+  cursor: pointer;
   background-color: #ff681d;
   border: none;
   color: white;
@@ -265,6 +335,8 @@ main {
 }
 
 .icon-btn {
+  cursor: pointer;
+
   border: none;
   background-color: transparent;
   margin-left: 15px;
@@ -272,18 +344,6 @@ main {
   i {
     font-size: 1.2rem;
     opacity: 0.2;
-  }
-}
-
-.selected {
-  border: solid 7px $color6;
-  button:first-child {
-    background-color: $color3;
-    i {
-      color: $color4;
-      font-size: 1.2rem;
-      padding-right: 10px;
-    }
   }
 }
 
@@ -296,6 +356,9 @@ footer {
     justify-content: space-between;
     align-items: baseline;
     flex-wrap: wrap;
+    li {
+      text-transform: uppercase;
+    }
   }
   span {
     color: $color4;
@@ -349,7 +412,6 @@ footer {
 
 li {
   list-style-type: none;
-  text-transform: uppercase;
 }
 
 a {

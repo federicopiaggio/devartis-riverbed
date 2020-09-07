@@ -21,7 +21,11 @@
 
         <ul>
           <li>
-            <a id="cart" href=""><i class="fas fa-shopping-cart"></i> Cart</a>
+            <a id="cart" href="">
+              <div class="cart-status">2</div>
+
+              <i class="fas fa-shopping-cart"></i> Cart</a
+            >
           </li>
 
           <li>
@@ -33,13 +37,16 @@
       <div class="border-gradient"></div>
     </header>
 
-    <main>
+    <nav>
       <ul class="web-links">
         <li><a href="">Catalog</a><span>></span></li>
         <li><a href="">Cart Contents</a><span>></span></li>
         <li><a href="">Checkout</a></li>
       </ul>
+      <hr />
+    </nav>
 
+    <main>
       <ul class="step-progress-bar">
         <li class="step-active">Your Cart</li>
         <li class="step-active">Delivery</li>
@@ -90,8 +97,10 @@
           </div>
         </ul>
         <ul class="address passive">
-          <li></li>
-          <div class="button-container">
+          <li>
+            <i class="far fa-plus-square"></i>
+          </li>
+          <div class="button-container new-address">
             <button class="btn">Add new address</button>
           </div>
         </ul>
