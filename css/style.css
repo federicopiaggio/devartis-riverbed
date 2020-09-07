@@ -266,6 +266,8 @@ footer {
     justify-content: space-between;
     align-items: baseline;
     flex-wrap: wrap; }
+    footer .footer-container ul {
+      flex-wrap: wrap; }
     footer .footer-container li {
       text-transform: uppercase; }
   footer span {
@@ -274,6 +276,7 @@ footer {
     font-weight: 300;
     opacity: 0.5; }
   footer h2 {
+    padding: 5px;
     color: #ff681d;
     font-size: 1.6rem;
     display: inline;
@@ -311,5 +314,27 @@ li {
 a {
   text-decoration: none;
   color: white; }
+
+@media (max-width: 1079px) {
+  .passive {
+    min-height: 291px; } }
+@media (max-width: 739px) {
+  .addresses-container {
+    justify-content: center; } }
+@media (max-width: 600px) {
+  main .step-progress-bar li {
+    font-size: 0.7rem; } }
+@media (max-width: 440px) {
+  .header-container ul li {
+    font-size: 0.8rem;
+    padding: 8px; }
+
+  main .step-progress-bar li {
+    font-size: 0.5rem; }
+  main .step-progress-bar li:before {
+    width: 20px;
+    height: 20px; }
+  main .step-progress-bar li:after {
+    top: 17px; } }
 
 /*# sourceMappingURL=style.css.map */

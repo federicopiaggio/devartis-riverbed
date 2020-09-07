@@ -356,6 +356,9 @@ footer {
     justify-content: space-between;
     align-items: baseline;
     flex-wrap: wrap;
+    ul {
+      flex-wrap: wrap;
+    }
     li {
       text-transform: uppercase;
     }
@@ -368,6 +371,7 @@ footer {
   }
 
   h2 {
+    padding: 5px;
     color: $color1;
     font-size: 1.6rem;
     display: inline;
@@ -417,4 +421,44 @@ li {
 a {
   text-decoration: none;
   color: white;
+}
+
+@media (max-width: 1079px) {
+  .passive {
+    min-height: 291px;
+  }
+}
+
+@media (max-width: 739px) {
+  .addresses-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  main .step-progress-bar li {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .header-container ul {
+    li {
+      font-size: 0.8rem;
+      padding: 8px;
+    }
+  }
+
+  main .step-progress-bar {
+    li {
+      font-size: 0.5rem;
+    }
+    li:before {
+      width: 20px;
+      height: 20px;
+    }
+    li:after {
+      top: 17px;
+    }
+  }
 }
