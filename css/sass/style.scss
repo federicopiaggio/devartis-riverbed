@@ -8,6 +8,8 @@ $color6: #dadde0;
 $color7: #59aee1;
 $color8: #8999a5;
 
+//general styles
+
 * {
   margin: 0;
   padding: 0;
@@ -22,26 +24,54 @@ section,
 .header-container,
 .web-links {
   margin: auto;
-  max-width: 1460px;
+  max-width: 1200px;
   padding: 0 30px;
 }
 
-/* .margin-left {
-  margin-left: 10%;
-} */
-
-/* .margin-right {
-  margin-right: 10%;
-}
- */
 h3 {
   font-size: 1.3rem;
   margin: 30px 0 20px;
 }
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #ff681d;
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  min-width: 130px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+}
+
+//particular styles divided by diferents elements
+
 header {
   background-image: url("../img/header-img.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  .border-gradient {
+    flex: 1;
+    height: 10px;
+    background: rgb(255, 190, 67);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 190, 67, 1) 0%,
+      rgba(255, 104, 29, 1) 100%
+    );
+  }
 }
 .header-container {
   display: flex;
@@ -98,21 +128,12 @@ header {
   }
 }
 
-.border-gradient {
-  flex: 1;
-  height: 10px;
-  background: rgb(255, 190, 67);
-  background: linear-gradient(
-    90deg,
-    rgba(255, 190, 67, 1) 0%,
-    rgba(255, 104, 29, 1) 100%
-  );
-}
 nav {
   .web-links {
     display: flex;
     text-align: center;
     padding: 20px 30px;
+    opacity: 0.6;
 
     a {
       padding: 10px;
@@ -240,6 +261,22 @@ main {
         opacity: 0.3;
       }
     }
+    .button-container {
+      margin-top: 20px;
+    }
+
+    .icon-btn {
+      cursor: pointer;
+
+      border: none;
+      background-color: transparent;
+      margin-left: 15px;
+
+      i {
+        font-size: 1.2rem;
+        opacity: 0.2;
+      }
+    }
   }
 
   .address-info {
@@ -316,37 +353,6 @@ main {
   }
 }
 
-.button-container {
-  margin-top: 20px;
-}
-
-.btn {
-  cursor: pointer;
-  background-color: #ff681d;
-  border: none;
-  color: white;
-  padding: 10px 30px;
-  min-width: 130px;
-  text-align: center;
-  font-weight: 500;
-  font-size: 0.9rem;
-  border-radius: 50px;
-  text-transform: uppercase;
-}
-
-.icon-btn {
-  cursor: pointer;
-
-  border: none;
-  background-color: transparent;
-  margin-left: 15px;
-
-  i {
-    font-size: 1.2rem;
-    opacity: 0.2;
-  }
-}
-
 footer {
   background-color: $color3;
   padding: 40px 0 60px;
@@ -414,14 +420,7 @@ footer {
   }
 }
 
-li {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-  color: white;
-}
+//Media querys
 
 @media (max-width: 1079px) {
   .passive {
